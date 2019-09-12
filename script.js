@@ -36,12 +36,12 @@ function visGenre() {
         if ((filterKategori == "alle" || genre.gsx$genre.$t == filterKategori)) {
             const klon = temp.cloneNode(true).content;
             klon.querySelector("h2").textContent = genre.gsx$titel.$t
-            klon.querySelector(".genre").textContent = genre.gsx$genre.$t;
-            klon.querySelector(".pris").textContent = `Pris: ${genre.gsx$pris.$t} kr.`;
-            klon.querySelector(".artist").textContent = genre.gsx$artist.$t;
-            klon.querySelector(".udgivelsesår").textContent = `${genre.gsx$udgivelsesår.$t}`;
+            //klon.querySelector(".genre").textContent = genre.gsx$genre.$t;
+            //klon.querySelector(".pris").textContent = `Pris: ${genre.gsx$pris.$t} kr.`;
+            klon.querySelector(".artist").textContent = `Kunstner: ${genre.gsx$artist.$t};`
+            //klon.querySelector(".udgivelsesår").textContent = `${genre.gsx$udgivelsesår.$t}`;
             //klon.querySelector(".lang").textContent = ret.gsx$lang.$t;
-            klon.querySelector(".track").textContent = genre.gsx$track.$t;
+            //klon.querySelector(".track").textContent = genre.gsx$track.$t;
             klon.querySelector("img").src = `img/${genre.gsx$billede.$t}`;
             modtagerKloner.appendChild(klon);
             modtagerKloner.lastElementChild.addEventListener("click", () => {
