@@ -23,8 +23,7 @@
       .gradient {
           width: 100vw;
           height: 1vw;
-          border: 1px solid black;
-          background-image: linear-gradient(to right, red, yellow, green, blue, purple);
+          background-image: linear-gradient(to right, red, yellow, greenyellow, aqua, purple);
       }
 
       article {
