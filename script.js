@@ -42,7 +42,7 @@ function visGenre() {
             klon.querySelector(".udgivelsesår").textContent = `${genre.gsx$udgivelsesår.$t}`;
             //klon.querySelector(".lang").textContent = ret.gsx$lang.$t;
             klon.querySelector(".track").textContent = genre.gsx$track.$t;
-            //klon.querySelector("img").src = `imgs/small/${ret.gsx$billede.$t}.jpg`;
+            klon.querySelector("img").src = `img/${genre.gsx$billede.$t}`;
             modtagerKloner.appendChild(klon);
             modtagerKloner.lastElementChild.addEventListener("click", () => {
                 visSingle(ret)
