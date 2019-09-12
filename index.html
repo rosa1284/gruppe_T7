@@ -1,64 +1,47 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .modtager {
-
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-
-        .modtager {
-            margin: 100px;
-            margin-top: 0px;
-        }
-    </style>
 </head>
 
 <body>
-
-
     <header>
-        <div class="splash">
-
-        </div>
-        <div class="gradient">
-        </div>
+        <div class="splash"></div>
+        <div class="gradient"></div>
     </header>
+
     <nav>
-        <button class="filter" data-kategori="alle">Alle</button>
+        <button class="filter valgt" data-kategori="alle">Alle</button>
         <button class="filter" data-kategori="rock">Rock</button>
         <button class="filter" data-kategori="dansk">Dansk</button>
         <button class="filter" data-kategori="pop">Pop</button>
         <button class="filter" data-kategori="country">Country</button>
         <button class="filter" data-kategori="jul">Jul</button>
-
     </nav>
-    <h2>Alle</h2>
+
+    <h1>Alle</h1>
 
     <template>
         <article id="liste">
-
-            <a href=""></a>
-            <div class="image_container"><img src="" alt=""></div>
-            <h2></h2>
-            <p class="titel"></p>
-            <p class="artist"></p>
-            <!--
-        <p class="genre"></p>
-        <p class="udgivelsesår"></p>
-        <p class="pris"></p>
-        <p class="track"></p>
--->
-
+            <a href="">
+                <div class="image_container"><img src="" alt=""></div>
+                <h2></h2>
+                <!--<p class="titel"></p>-->
+                <p class="artist"></p>
+                <!--<p class="genre"></p>
+                <p class="udgivelsesår"></p>
+                <p class="pris"></p>
+                <p class="track">
+                </p>-->
+            </a>
         </article>
     </template>
 
     <section class="modtager"></section>
+
     <script src="script.js"></script>
 </body></html>
