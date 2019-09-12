@@ -9,13 +9,19 @@
       .splash {
           background-image: url(cover/cover1Artboard%201.jpg);
           background-size: cover;
+          width: 100vw;
           height: 35vh;
           background-position: center;
 
 
       }
 
-
+      .gradient {
+          width: 100vw;
+          height: 1vw;
+          border: 1px solid black;
+          background-image: linear-gradient(to right, red, yellow, green, blue, purple);
+      }
 
       article {
           border: 1px solid black;
