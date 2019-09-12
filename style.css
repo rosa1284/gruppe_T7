@@ -16,6 +16,10 @@
 
       }
 
+      .image_container img {
+          border-radius: 50%;
+      }
+
       .gradient {
           width: 100vw;
           height: 1vw;
