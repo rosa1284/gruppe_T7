@@ -6,6 +6,13 @@
           width: 100%;
       }
 
+      .splash {
+          background-image: url(cover/cover1Artboard1.jpg);
+          background-size: cover;
+          height: 30vh;
+          line-height: 10vw;
+      }
+
       article {
           border: 1px solid black;
           padding: 10px;
