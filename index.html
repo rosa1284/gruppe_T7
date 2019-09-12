@@ -4,12 +4,186 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="">
+    <title>Music</title>
+    <style>
+        body {
+            margin 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        article {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            margin: 5px;
+
+        }
+
+
+
+        .valgt {
+            background-color: red;
+        }
+
+
+
+
+        .modtager {
+            margin: 5px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        body h1,
+        h2 {
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        .txt {
+            line-height: 3.5;
+        }
+
+
+        .indhold {
+            width: 70vw;
+            min-height: 50vh;
+            background: #fff;
+            margin: 4rem auto;
+            padding: 10px;
+        }
+
+    </style>
 </head>
 
 <body>
-    <script src=""></script>
+
+
+    <header>
+        <div class="splash">
+            <div class="txt">
+                <h1>Music</h1>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <button class="filter" data-kategori="alle">Alle</button>
+        <button class="filter" data-kategori="rock">Rock</button>
+        <button class="filter" data-kategori="dansk">Dansk</button>
+        <button class="filter" data-kategori="pop">Pop</button>
+        <button class="filter" data-kategori="country">Country</button>
+        <button class="filter" data-kategori="jul">Jul</button>
+
+    </nav>
+    <h2>Alle</h2>
+
+    <template>
+        <article id="liste">
+            <h2></h2>
+            <a href=""></a>
+            <img src="" alt="">
+            <p class="genre"></p>
+            <p class="titel"></p>
+            <p class="artist"></p>
+            <p class="udgivelsesår"></p>
+            <p class="pris"></p>
+            <p class="track"></p>
+        </article>
+    </template>
+
+    <section class="modtager"></section>
+    <script>
+        let alleGenre = [];
+        let filterKategori = "alle";
+        const dest = document.querySelector("liste");
+        const temp = document.querySelector("template");
+        const modtagerKloner = document.querySelector(".modtager");
+        document.addEventListener("DOMContentLoaded", getJson);
+
+
+
+        async function getJson() {
+
+            let jsonData = await fetch("https://spreadsheets.google.com/feeds/list/1JZaKWrVtkj-qGVCfIds-V04jho2DVpx5GrNsChLv_Sk/od6/public/values?alt=json");
+            console.log("jsonData", jsonData);
+            alleGenre = await jsonData.json();
+            visGenre();
+            addEventListenerToButtons();
+
+        }
+
+
+        function visGenre() {
+
+
+            modtagerKloner.innerHTML = "";
+
+            console.log(alleGenre);
+
+
+            //    const temp = document.querySelector("template"); filterKøn nedeunder
+
+
+            alleGenre.feed.entry.forEach(genre => {
+                //listeVisning.innerHTML += `<p>${hvertDyr.navn}, ${hvertDyr.type}, ${hvertDyr.levested}</p>`;
+                if ((filterKategori == "alle" || genre.gsx$genre.$t == filterKategori)) {
+                    const klon = temp.cloneNode(true).content;
+                    klon.querySelector("h2").textContent = genre.gsx$titel.$t
+                    klon.querySelector(".genre").textContent = genre.gsx$genre.$t;
+                    klon.querySelector(".pris").textContent = `Pris: ${genre.gsx$pris.$t} kr.`;
+                    klon.querySelector(".artist").textContent = genre.gsx$artist.$t;
+                    klon.querySelector(".udgivelsesår").textContent = `${genre.gsx$udgivelsesår.$t}`;
+                    //klon.querySelector(".lang").textContent = ret.gsx$lang.$t;
+                    klon.querySelector(".track").textContent = genre.gsx$track.$t;
+                    //klon.querySelector("img").src = `imgs/small/${ret.gsx$billede.$t}.jpg`;
+                    modtagerKloner.appendChild(klon);
+                    modtagerKloner.lastElementChild.addEventListener("click", () => {
+                        visSingle(ret)
+                    });
+
+                }
+
+
+
+
+            })
+        }
+
+        function addEventListenerToButtons() {
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering)
+            })
+        }
+
+        function filtrering() {
+            filterKategori = this.dataset.kategori;
+            document.querySelector("h2").textContent = this.textContent;
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.classList.remove("valgt");
+            })
+            this.classList.add("valgt");
+            visGenre();
+        }
+
+    </script>
 </body>
 
 </html>
