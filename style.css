@@ -23,8 +23,9 @@
       .gradient {
           width: 100vw;
           height: 1vw;
-          background-image: linear-gradient(to right, red, yellow, greenyellow, aqua, purple);
+          background-image: linear-gradient(to right, red, #f44ab5, yellow, greenyellow, aqua, purple);
       }
+
 
       article {
           padding: 10px;
