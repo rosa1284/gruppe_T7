@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: 'Gothic A1', sans-serif;
 }
 
 .splash {
@@ -37,6 +38,13 @@ button.valgt {
 
 h1 {
     text-align: center;
+    font-weight: 900;
+}
+
+h2 {
+    font-weight: 900;
+
+
 }
 
 .modtager {
@@ -50,6 +58,7 @@ article {
     padding: 10px;
     background-image: linear-gradient(white, red);
     cursor: pointer;
+
 }
 
 .image_container {
