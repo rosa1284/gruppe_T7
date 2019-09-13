@@ -23,6 +23,7 @@ function visGenre() {
             klon.querySelector("h2").textContent = genre.gsx$titel.$t
             klon.querySelector(".artist").textContent = genre.gsx$artist.$t;
             klon.querySelector("img").src = `img/${genre.gsx$billede.$t}`;
+            klon.querySelector("article").classList.add(genre.gsx$genre.$t);
             modtagerKloner.appendChild(klon);
             modtagerKloner.lastElementChild.addEventListener("click", () => {
                 location.href = `album.html?album=${genre.gsx$id.$t}`;
