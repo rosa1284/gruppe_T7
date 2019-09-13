@@ -36,8 +36,29 @@ button {
     cursor: pointer;
 }
 
-button.valgt {
-    background-color: red;
+button.valgt.rock_btn {
+    background-color: #b92d53;
+
+}
+
+button.valgt.pop_btn {
+    background-color: #f9ec4d;
+
+}
+
+button.valgt.jul_btn {
+    background-color: #8149ff;
+
+}
+
+button.valgt.dansk_btn {
+    background-color: #95d95a;
+
+}
+
+button.valgt.country_btn {
+    background-color: #86e4e4;
+
 }
 
 h1 {
@@ -45,17 +66,17 @@ h1 {
     font-weight: 900;
 }
 
-h2 {
+article h2 {
     font-weight: 900;
-
-
+    background-color: white;
+    padding: 10px
 }
 
 .modtager {
-    margin: 0 100px 100px;
+    margin: 0 200px 200px;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 article {
@@ -129,11 +150,56 @@ h1 {
     background-color: hsl(309, 39%, 40%);
 }
 
-.track_boks h1 {
+.track_boks h2 {
     text-align: center;
     font-size: 2.4rem;
     padding-top: 1px;
+}
 
+
+.rock {
+    background-image: linear-gradient(rgb(255, 255, 255) 35%, rgb(185, 45, 83, 1) 70%);
+}
+
+.rock h2 {
+    color: #b92d53;
+
+}
+
+.pop {
+    background-image: linear-gradient(rgb(255, 255, 255) 35%, rgb(249, 236, 77, 1) 70%);
+}
+
+.pop h2 {
+    color: #f9ec4d;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #e6d70f;
+}
+
+.dansk {
+    background-image: linear-gradient(rgb(255, 255, 255) 35%, rgb(149, 217, 89, 1) 70%);
+}
+
+.dansk h2 {
+    color: #95d95a;
+
+}
+
+.country {
+    background-image: linear-gradient(rgb(255, 255, 255) 35%, rgb(134, 228, 228, 1) 70%);
+}
+
+.country h2 {
+    color: #86e4e4;
+
+}
+
+.jul {
+    background-image: linear-gradient(rgb(255, 255, 255) 35%, rgb(129, 73, 255, 1) 70%);
+}
+
+.jul h2 {
+    color: #8149ff;
 
 }
 
