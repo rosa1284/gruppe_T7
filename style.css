@@ -84,6 +84,7 @@ article {
 #view {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .view_boks {
@@ -103,8 +104,8 @@ article {
 }
 
 .view_boks {
-    width: 100vh;
-
+    max-width: 1200px;
+    margin-top: 60px;
 }
 
 #view .txt,
