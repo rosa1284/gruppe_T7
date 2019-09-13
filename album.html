@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="da">
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1:400,700,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <div class="splash"></div>
+        <div class="gradient"></div>
+    </header>
+
+
     <section id="view">
 
-        <div class="img_container"><img src="" alt=""></div>
+        <div class="view_boks">
+            <div class="col">
+                <div class="img_container"><img src="" alt=""></div>
+                <button class="close">Tilbage</button>
+            </div>
+            <div>
+                <div class="col">
+                    <div class="txt">
+                        <h1 class="titel"></h1>
+                        <h2 class="artist"></h2>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="txt">
+                        <p class="pris"></p>
+                        <p class="udgivelsesår"></p>
+                        <p class="genre"></p>
+                        <div class="track_boks">
+                            <h1>TRACK</h1>
+                            <ol class="track"></ol>
+                        </div>
+                    </div>
+                </div>
 
-        <div>
-            <h2 class="titel"></h2>
-            <p class="artist"></p>
-            <p class="pris"></p>
-            <p class="udgivelsesår"></p>
-            <p class="genre"></p>
-            <ol class="track"></ol>
-            <button class="close">Tilbage</button>
+
+            </div>
         </div>
-
     </section>
 
     <footer></footer>
 
     <script src="album.js"></script>
-</body></html>
+</body>
+
+</html>

@@ -33,10 +33,11 @@ function viewAlbum() {
         if (cd.gsx$id.$t == id) {
             console.log(cd);
             document.querySelector("#view img").src = `img/${cd.gsx$billede.$t}`;
-            document.querySelector("#view h2").textContent = cd.gsx$titel.$t;
+            document.querySelector("#view .titel").textContent = ` ${cd.gsx$titel.$t}`;
+            document.querySelector("#view .artist").textContent = cd.gsx$artist.$t;
             document.querySelector("#view .pris").textContent = `Pris: ${cd.gsx$pris.$t} kr`;
-            document.querySelector("#view .udgivelsesår").textContent = cd.gsx$udgivelsesår.$t;
-            document.querySelector("#view .genre").textContent = cd.gsx$genre.$t;
+            document.querySelector("#view .udgivelsesår").textContent = ` Udgivelsesår: ${cd.gsx$udgivelsesår.$t}`;
+            document.querySelector("#view .genre").textContent = `Genre: ${ cd.gsx$genre.$t}`;
             //document.querySelector("#view .track").textContent = cd.gsx$track.$t;
             var sange = cd.gsx$track.$t.split(",");
             sange.forEach((sang) => {
