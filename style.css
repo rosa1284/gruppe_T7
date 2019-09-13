@@ -30,7 +30,7 @@ nav {
 button {
     background-color: black;
     color: white;
-    margin: 5px;
+    margin: 50px 0px 50px 0px;
     padding: 8px 24px;
     font-size: 20px;
     cursor: pointer;
@@ -129,6 +129,14 @@ article {
     margin-top: 60px;
 }
 
+.view_boks .txt h2 {
+    color: #000;
+}
+
+.view_boks .txt .track_boks h2 {
+    color: #fff;
+}
+
 #view .txt,
 p,
 h1 {
@@ -147,7 +155,7 @@ h1 {
     height: auto;
     border: 2px solid white;
     color: white;
-    background-color: hsl(309, 39%, 40%);
+    background-color: black;
 }
 
 .track_boks h2 {

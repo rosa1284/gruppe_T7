@@ -40,7 +40,6 @@ function addEventListenerToButtons() {
 
 function filtrering() {
     filterKategori = this.dataset.kategori;
-    document.querySelector("h1").textContent = this.textContent;
     document.querySelectorAll(".filter").forEach(elm => {
         elm.classList.remove("valgt");
     });
