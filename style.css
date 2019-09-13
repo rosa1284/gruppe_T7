@@ -30,15 +30,9 @@ nav {
 button {
     background-color: black;
     color: white;
-<<<<<<< HEAD
     margin: 0px 0px 0px 0px;
     padding: 4px 12px;
     font-size: 10px;
-=======
-    margin: 50px 0px 50px 0px;
-    padding: 8px 24px;
-    font-size: 20px;
->>>>>>> origin/master
     cursor: pointer;
     outline: none;
 }
@@ -159,21 +153,7 @@ p.artist {
     color: #fff;
 }*/
 
-<<<<<<< HEAD
 #view .col {
-=======
-.view_boks .txt h2 {
-    color: #000;
-}
-
-.view_boks .txt .track_boks h2 {
-    color: #fff;
-}
-
-#view .txt,
-p,
-h1 {
->>>>>>> origin/master
     padding: 10px;
 }
 
@@ -189,12 +169,8 @@ h1 {
     height: auto;
     border: 2px solid white;
     color: white;
-<<<<<<< HEAD
     background-color: black;*/
     border: 7px double rgba(0, 0, 0, 0.3);
-=======
-    background-color: black;
->>>>>>> origin/master
 }
 
 .track_boks h2 {
