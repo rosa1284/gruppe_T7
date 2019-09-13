@@ -2,6 +2,11 @@ let alleGenre = [];
 let filterKategori = "alle";
 const temp = document.querySelector("template");
 const modtagerKloner = document.querySelector(".modtager");
+const rockGradient = "linear-gradient(to top, rgb(185, 45, 83) 30%, rgba(255, 255, 255, 0) 50%)";
+const danskGradient = "linear-gradient(to top, rgb(149, 217, 89) 30%, rgba(255, 255, 255, 0) 50%)";
+const popGradient = "linear-gradient(to top, rgb(249, 236, 77) 30%, rgba(255, 255, 255, 0) 50%)";
+const countryGradient = "linear-gradient(to top, rgb(134, 228, 228) 30%, rgba(255, 255, 255, 0) 50%)";
+const julGradient = "linear-gradient(to top, rgb(129, 73, 255) 30%, rgba(255, 255, 255, 0) 50%)";
 document.addEventListener("DOMContentLoaded", getJson);
 
 async function getJson() {
@@ -22,7 +27,17 @@ function visGenre() {
             const klon = temp.cloneNode(true).content;
             klon.querySelector("h2").textContent = genre.gsx$titel.$t
             klon.querySelector(".artist").textContent = genre.gsx$artist.$t;
-            klon.querySelector("img").src = `img/${genre.gsx$billede.$t}`;
+            if (genre.gsx$genre.$t == "rock") {
+                klon.querySelector("article").style.backgroundImage = `${rockGradient}, url(img/${genre.gsx$billede.$t})`;
+            } else if (genre.gsx$genre.$t == "dansk") {
+                klon.querySelector("article").style.backgroundImage = `${danskGradient}, url(img/${genre.gsx$billede.$t})`;
+            } else if (genre.gsx$genre.$t == "pop") {
+                klon.querySelector("article").style.backgroundImage = `${popGradient}, url(img/${genre.gsx$billede.$t})`;
+            } else if (genre.gsx$genre.$t == "country") {
+                klon.querySelector("article").style.backgroundImage = `${countryGradient}, url(img/${genre.gsx$billede.$t})`;
+            } else if (genre.gsx$genre.$t == "jul") {
+                klon.querySelector("article").style.backgroundImage = `${julGradient}, url(img/${genre.gsx$billede.$t})`;
+            }
             klon.querySelector("article").classList.add(genre.gsx$genre.$t);
             modtagerKloner.appendChild(klon);
             modtagerKloner.lastElementChild.addEventListener("click", () => {
@@ -40,7 +55,6 @@ function addEventListenerToButtons() {
 
 function filtrering() {
     filterKategori = this.dataset.kategori;
-    document.querySelector("h1").textContent = this.textContent;
     document.querySelectorAll(".filter").forEach(elm => {
         elm.classList.remove("valgt");
     });

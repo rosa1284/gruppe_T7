@@ -10,14 +10,14 @@ img {
 .splash {
     background-image: url("cover/cover1Artboard%201.jpg");
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 26vw;
     background-position: center;
 }
 
 .gradient {
-    width: 100vw;
-    height: 3vw;
+    width: 100%;
+    height: 1vh;
     background-image: linear-gradient(to right, red, #f44ab5, yellow, greenyellow, aqua, purple);
 }
 
@@ -30,9 +30,9 @@ nav {
 button {
     background-color: black;
     color: white;
-    margin: 5px;
-    padding: 8px 24px;
-    font-size: 20px;
+    margin: 0px 0px 0px 0px;
+    padding: 4px 12px;
+    font-size: 10px;
     cursor: pointer;
     outline: none;
 }
@@ -67,24 +67,60 @@ h1 {
     font-weight: 900;
 }
 
-article h2 {
+article .ribbon {
     font-weight: 900;
     background-color: white;
-    padding: 10px
+    padding: 10px;
+    display: inline-block;
+    padding: 12px 16px 8px 10px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    max-width: 80%;
+}
+
+.genre {
+    text-transform: capitalize;
 }
 
 .modtager {
-    margin: 0 200px 200px;
+    margin: 20px 0 0;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(1, 1fr);
 }
 
 article {
-    padding: 10px;
-    background-image: linear-gradient(white, red);
+    /*padding: 10px;*/
+    padding-top: 100%;
+    /*background-image: linear-gradient(white, red);*/
     cursor: pointer;
+    width: 100%;
+    /*height: 0;
+    padding: 160% 0px 0px;
+    position: relative;*/
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
+.content {
+    /*position: absolute;
+    bottom: 0;
+    left: 0;*/
+    width: 100%;
+    /*height: 0;
+    padding-top: 150%;*/
+}
+
+p.artist {
+    /*position: absolute;
+    bottom: 20px;*/
+    color: #fff;
+    padding: 0 10px;
+}
+
+.content h2 {
+    margin: 0;
+    font-size: 14px;
 }
 
 .image_container {
@@ -103,35 +139,21 @@ article {
     height: 100%;
 }
 
-#view {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .view_boks {
-    display: flex;
-    flex-wrap: wrap;
-
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 20px 0;
 }
 
-.view_boks .col {
-    flex-grow: 1;
-    display: flex;
-    flex-basis: 300px;
-    flex-direction: column;
-
-
+#view h2 {
+    color: #000;
 }
 
-.view_boks {
-    max-width: 1200px;
-    margin-top: 60px;
-}
+/*.view_boks .txt .track_boks h2 {
+    color: #fff;
+}*/
 
-#view .txt,
-p,
-h1 {
+#view .col {
     padding: 10px;
 }
 
@@ -139,15 +161,16 @@ h1 {
     text-align: left;
     font-weight: 900;
     font-size: 2rem;
-    padding: 0;
+    margin: 0.5rem 0;
 }
 
 .track_boks {
-    width: 100;
+    /*width: 100;
     height: auto;
     border: 2px solid white;
     color: white;
-    background-color: hsl(309, 39%, 40%);
+    background-color: black;*/
+    border: 7px double rgba(0, 0, 0, 0.3);
 }
 
 .track_boks h2 {
@@ -157,8 +180,8 @@ h1 {
 }
 
 
-.rock {
-    background-image: linear-gradient(rgb(255, 255, 255) 35%, rgb(185, 45, 83, 1) 70%);
+#view .rock {
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(185, 45, 83) 70%);
 }
 
 .rock h2 {
@@ -166,18 +189,16 @@ h1 {
 
 }
 
-.pop {
-    background-image: linear-gradient(rgb(255, 255, 255) 35%, rgb(249, 236, 77, 1) 70%);
+#view .pop {
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(249, 236, 77) 70%);
 }
 
 .pop h2 {
     color: #f9ec4d;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #e6d70f;
 }
 
-.dansk {
-    background-image: linear-gradient(rgb(255, 255, 255) 35%, rgb(149, 217, 89, 1) 70%);
+#view .dansk {
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);
 }
 
 .dansk h2 {
@@ -185,8 +206,8 @@ h1 {
 
 }
 
-.country {
-    background-image: linear-gradient(rgb(255, 255, 255) 35%, rgb(134, 228, 228, 1) 70%);
+#view .country {
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(134, 228, 228) 70%);
 }
 
 .country h2 {
@@ -194,8 +215,8 @@ h1 {
 
 }
 
-.jul {
-    background-image: linear-gradient(rgb(255, 255, 255) 35%, rgb(129, 73, 255, 1) 70%);
+#view .jul {
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(129, 73, 255) 70%);
 }
 
 .jul h2 {
@@ -203,42 +224,74 @@ h1 {
 
 }
 
+button.close {
+    margin: 20px 0px 20px 0px;
+}
 
+@media only screen and (min-width: 576px) {
+    button {
+        margin: 50px 0px 50px 0px;
+        padding: 8px 24px;
+        font-size: 20px;
+    }
 
-@media only screen and (min-width: 400px) {
-
+    article {
+        border-radius: 8px;
+    }
 
     .modtager {
-        margin: 20px 0px 0px;
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: repeat(1, 1fr);
+        margin: 0 20px 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .view_boks {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px 20px;
+    }
+
+    .track_col {
+        grid-column: span 2;
     }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
     .gradient {
-        height: 1vw;
-
+        height: 3vh;
     }
 
     .modtager {
         margin: 0 100px 100px;
-        display: grid;
-        grid-gap: 20px;
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .view_boks {
+        margin: 40px 100px;
+    }
 }
 
-
 @media only screen and (min-width: 1200px) {
+    .modtager {
+        margin: 0 150px 150px;
+        grid-template-columns: repeat(3, 1fr);
+    }
 
+    .view_boks {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 60px 150px;
+    }
 
+    .track_col {
+        grid-column: auto;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
     .modtager {
         margin: 0 200px 200px;
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .view_boks {
+        margin: 60px 200px;
     }
 }
