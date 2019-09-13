@@ -38,6 +38,7 @@ function viewAlbum() {
             document.querySelector("#view .pris").textContent = `Pris: ${cd.gsx$pris.$t} kr`;
             document.querySelector("#view .udgivelsesår").textContent = ` Udgivelsesår: ${cd.gsx$udgivelsesår.$t}`;
             document.querySelector("#view .genre").textContent = `Genre: ${ cd.gsx$genre.$t}`;
+            document.querySelector(".view_boks").classList.add(cd.gsx$genre.$t);
             //document.querySelector("#view .track").textContent = cd.gsx$track.$t;
             var sange = cd.gsx$track.$t.split(",");
             sange.forEach((sang) => {

@@ -110,7 +110,6 @@ article {
 }
 
 .view_boks {
-    background-image: linear-gradient(white, #f44ab5);
     display: flex;
     flex-wrap: wrap;
 
@@ -207,11 +206,7 @@ h1 {
 
 
 @media only screen and (min-width: 400px) {
-    .view_boks {
-        background-image: linear-gradient(to right, white, #f44ab5);
 
-
-    }
 
     .modtager {
         margin: 20px 0px 0px;
@@ -238,11 +233,7 @@ h1 {
 
 
 @media only screen and (min-width: 1200px) {
-    .view_boks {
-        background-image: linear-gradient(to right, white, #f44ab5);
 
-
-    }
 
     .modtager {
         margin: 0 200px 200px;
