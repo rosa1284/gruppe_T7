@@ -1,3 +1,15 @@
+/*----------------------------------------------
+1: Globale regler
+2: Header
+3: Forside
+4: Album side
+5: Media Queries
+----------------------------------------------*/
+
+/*----------------------------------------------
+1: Globale regler
+----------------------------------------------*/
+
 body {
     margin: 0;
     font-family: 'Gothic A1', sans-serif;
@@ -6,6 +18,25 @@ body {
 img {
     width: 100%;
 }
+
+button {
+    background-color: black;
+    color: white;
+    margin: 0px 0px 0px 0px;
+    padding: 4px 12px;
+    font-size: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 900;
+}
+
+/*----------------------------------------------
+2: Header
+----------------------------------------------*/
 
 .splash {
     background-image: url("cover/cover1Artboard%201.jpg");
@@ -21,50 +52,53 @@ img {
     background-image: linear-gradient(to right, red, #f44ab5, yellow, greenyellow, aqua, purple);
 }
 
+/*----------------------------------------------
+3: Forside
+----------------------------------------------*/
+
 nav {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
-button {
-    background-color: black;
-    color: white;
-    margin: 0px 0px 0px 0px;
-    padding: 4px 12px;
-    font-size: 10px;
-    cursor: pointer;
-    outline: none;
-}
-
 button.valgt.rock_btn {
     background-color: #b92d53;
-
 }
 
 button.valgt.pop_btn {
     background-color: #f9ec4d;
-
 }
 
 button.valgt.jul_btn {
     background-color: #8149ff;
-
 }
 
 button.valgt.dansk_btn {
     background-color: #95d95a;
-
 }
 
 button.valgt.country_btn {
     background-color: #86e4e4;
-
 }
 
-h1 {
-    text-align: center;
-    font-weight: 900;
+.modtager {
+    margin: 20px 0 0;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+article {
+    padding-top: 100%;
+    cursor: pointer;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.content {
+    width: 100%;
 }
 
 article .ribbon {
@@ -78,49 +112,68 @@ article .ribbon {
     max-width: 80%;
 }
 
-.genre {
-    text-transform: capitalize;
+.content h2 {
+    margin: 0;
+    font-size: 14px;
 }
 
-.modtager {
-    margin: 20px 0 0;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
+.rock h2 {
+    color: #b92d53;
 }
 
-article {
-    /*padding: 10px;*/
-    padding-top: 100%;
-    /*background-image: linear-gradient(white, red);*/
-    cursor: pointer;
-    width: 100%;
-    /*height: 0;
-    padding: 160% 0px 0px;
-    position: relative;*/
-    background-repeat: no-repeat;
-    background-size: contain;
+.pop h2 {
+    color: #f9ec4d;
 }
 
-.content {
-    /*position: absolute;
-    bottom: 0;
-    left: 0;*/
-    width: 100%;
-    /*height: 0;
-    padding-top: 150%;*/
+.dansk h2 {
+    color: #95d95a;
+}
+
+.country h2 {
+    color: #86e4e4;
+}
+
+.jul h2 {
+    color: #8149ff;
 }
 
 p.artist {
-    /*position: absolute;
-    bottom: 20px;*/
     color: #fff;
     padding: 0 10px;
 }
 
-.content h2 {
-    margin: 0;
-    font-size: 14px;
+/*----------------------------------------------
+4: Album side
+----------------------------------------------*/
+
+.view_boks {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 20px 0;
+}
+
+#view .rock {
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(185, 45, 83) 70%);
+}
+
+#view .pop {
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(249, 236, 77) 70%);
+}
+
+#view .dansk {
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);
+}
+
+#view .country {
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(134, 228, 228) 70%);
+}
+
+#view .jul {
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(129, 73, 255) 70%);
+}
+
+#view .col {
+    padding: 10px;
 }
 
 .image_container {
@@ -139,24 +192,6 @@ p.artist {
     height: 100%;
 }
 
-.view_boks {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    margin: 20px 0;
-}
-
-#view h2 {
-    color: #000;
-}
-
-/*.view_boks .txt .track_boks h2 {
-    color: #fff;
-}*/
-
-#view .col {
-    padding: 10px;
-}
-
 #view .titel {
     text-align: left;
     font-weight: 900;
@@ -164,12 +199,19 @@ p.artist {
     margin: 0.5rem 0;
 }
 
+#view h2 {
+    color: #000;
+}
+
+.genre {
+    text-transform: capitalize;
+}
+
+button.close {
+    margin: 20px 0px 20px 0px;
+}
+
 .track_boks {
-    /*width: 100;
-    height: auto;
-    border: 2px solid white;
-    color: white;
-    background-color: black;*/
     border: 7px double rgba(0, 0, 0, 0.3);
 }
 
@@ -179,54 +221,9 @@ p.artist {
     padding-top: 1px;
 }
 
-
-#view .rock {
-    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(185, 45, 83) 70%);
-}
-
-.rock h2 {
-    color: #b92d53;
-
-}
-
-#view .pop {
-    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(249, 236, 77) 70%);
-}
-
-.pop h2 {
-    color: #f9ec4d;
-}
-
-#view .dansk {
-    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);
-}
-
-.dansk h2 {
-    color: #95d95a;
-
-}
-
-#view .country {
-    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(134, 228, 228) 70%);
-}
-
-.country h2 {
-    color: #86e4e4;
-
-}
-
-#view .jul {
-    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(129, 73, 255) 70%);
-}
-
-.jul h2 {
-    color: #8149ff;
-
-}
-
-button.close {
-    margin: 20px 0px 20px 0px;
-}
+/*----------------------------------------------
+5: Media Queries
+----------------------------------------------*/
 
 @media only screen and (min-width: 576px) {
     button {
@@ -235,14 +232,15 @@ button.close {
         font-size: 20px;
     }
 
-    article {
-        border-radius: 8px;
-    }
-
     .modtager {
         margin: 0 20px 20px;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    article {
+        border-radius: 8px;
+    }
+
 
     .view_boks {
         grid-template-columns: repeat(2, 1fr);
