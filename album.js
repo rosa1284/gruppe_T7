@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 
 
-/*singleDish kommer fra det andet script dokument script.js, der hvor vi linker over til den nye side */
+/*album kommer fra det andet script dokument script.js, der hvor vi linker over til den nye side */
 const id = urlParams.get("album");
 console.log(id);
 
@@ -11,22 +11,15 @@ const url = "https://spreadsheets.google.com/feeds/list/1JZaKWrVtkj-qGVCfIds-V04
 
 document.addEventListener("DOMContentLoaded", getJson);
 
-
-
 async function getJson() {
     const jsonData = await fetch(url);
     console.log("jsonData", jsonData);
     album = await jsonData.json();
     viewAlbum();
-
-
 }
 
 function viewAlbum() {
     console.log("view album", album);
-
-
-
     album.feed.entry.forEach((cd) => {
 
         console.log(cd.gsx$id.$t);
@@ -39,7 +32,6 @@ function viewAlbum() {
             document.querySelector("#view .udgivelsesår").textContent = ` Udgivelsesår: ${cd.gsx$udgivelsesår.$t}`;
             document.querySelector("#view .genre").textContent = `Genre: ${ cd.gsx$genre.$t}`;
             document.querySelector(".view_boks").classList.add(cd.gsx$genre.$t);
-            //document.querySelector("#view .track").textContent = cd.gsx$track.$t;
             var sange = cd.gsx$track.$t.split(",");
             sange.forEach((sang) => {
                 var li = document.createElement("li");
@@ -49,7 +41,6 @@ function viewAlbum() {
             });
         }
     })
-
 }
 document.querySelector(".close").addEventListener("click", () => {
     history.back();
