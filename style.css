@@ -253,7 +253,10 @@ button.close {
 ----------------------------------------------*/
 footer {
     color: #b4adad;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 
 /*----------------------------------------------
 6: Media Queries
@@ -284,6 +287,28 @@ footer {
     .track_col {
         grid-column: span 2;
     }
+
+    footer {}
+
+    footer .col {
+        flex-basis: 350px;
+        flex-grow: 1;
+        margin: 4vw;
+        margin-top: 0;
+
+    }
+
+    footer .col1 {
+        flex-basis: 350px;
+        flex-grow: 1;
+        margin: 4vw;
+        margin-top: 0;
+        display: flex;
+
+
+    }
+
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -299,6 +324,28 @@ footer {
     .view_boks {
         margin: 40px 100px;
     }
+
+    footer {}
+
+    footer .col {
+        flex-basis: 350px;
+        flex-grow: 1;
+        margin: 4vw;
+        margin-top: 0;
+
+    }
+
+    footer .col1 {
+        flex-basis: 350px;
+        flex-grow: 1;
+        margin: 4vw;
+        margin-top: 0;
+        display: flex;
+
+
+    }
+
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -315,4 +362,29 @@ footer {
     .track_col {
         grid-column: auto;
     }
+
+    footer {}
+
+    footer .col {
+        flex-basis: 350px;
+        flex-grow: 1;
+        margin: 4vw;
+        margin-top: 0;
+
+    }
+
+    footer .col1 {
+        flex-basis: 350px;
+        flex-grow: 1;
+        margin: 4vw;
+        margin-top: 0;
+        display: flex;
+
+
+    }
+
+
+
+
+
 }
