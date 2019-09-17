@@ -456,7 +456,7 @@ footer .col1 {
     }
 
     .view_boks {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         margin: 60px 150px;
     }
 
