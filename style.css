@@ -282,6 +282,22 @@ p.artist {
     padding: 10px;
 }
 
+
+
+#view {
+    margin: 20px;
+    margin-bottom: 20vw;
+}
+
+element.style {}
+
+#view .dansk {
+    box-shadow: 0px 0px 50px 4px #95d95a;
+    magin: 20px;
+    margin: 20px;
+    margin-bottom: 20vw;
+}
+
 .image_container {
     width: 100%;
     height: 0;
