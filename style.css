@@ -127,7 +127,6 @@ article {
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 8px;
-
 }
 
 .content {
@@ -150,24 +149,33 @@ article .ribbon {
     font-size: 20px;
 }
 
+.rock h1,
 .rock h2 {
     color: #b92d53;
 }
 
+.pop h1,
 .pop h2 {
     color: #f9ec4d;
 }
 
+.dansk h1,
 .dansk h2 {
     color: #95d95a;
 }
 
+.country h1,
 .country h2 {
     color: #86e4e4;
 }
 
+.jul h1,
 .jul h2 {
     color: #8149ff;
+}
+
+#view p {
+    color: #fff;
 }
 
 p.artist {
@@ -181,6 +189,12 @@ p.artist {
 4: Album side
 ----------------------------------------------*/
 
+.track {
+    text-align: center;
+    list-style-position: inside;
+    padding: 0;
+}
+
 .view_boks {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -189,113 +203,37 @@ p.artist {
 }
 
 #view .rock {
-    border: solid 5px #b92d53;
-
-}
-
-#view .rock h1 {
-    /*background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);*/
-    color: #b92d53;
-
-
-}
-
-#view .rock h2 {
-    color: #fff;
-
-
-}
-
-#view .rock p {
-    /*background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);*/
-    color: #fff;
-
-
-
-}
-
-#view .rock img {
-    /*    border: solid 5px #b92d53;*/
-
-}
-
-
-#view .pop {
-    border: solid 5px #f9ec4d;
-}
-
-#view .pop h1 {
-    /*background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);*/
-    color: #f9ec4d;
-
-}
-
-#view .pop h2 {
-    color: #f9ec4d;
-    text-align: center;
-}
-
-#view .pop p {
-    /*background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);*/
-    color: #fff;
-
-
-
-}
-
-#view .pop img {
-    /*    border: solid 5px #f9ec4d;*/
+    border: solid 2px #b92d53;
+    box-shadow: 0px 0px 50px 4px #b92d53;
+    margin: 50px 20px 20px;
 }
 
 #view .dansk {
     border: solid 2px #95d95a;
-}
-
-#view .dansk h1 {
-    /*background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);*/
-    color: #95d95a;
-
-}
-
-#view .dansk h2 {
-    color: #95d95a;
-    text-align: left;
-}
-
-#view .dansk p {
-    /*background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);*/
-    color: #fff;
-}
-
-#view .dansk {
     box-shadow: 0px 0px 50px 4px #95d95a;
+    margin: 50px 20px 20px;
+}
+
+#view .pop {
+    border: solid 2px #f9ec4d;
+    box-shadow: 0px 0px 50px 4px #f9ec4d;
+    margin: 50px 20px 20px;
 }
 
 #view .country {
-    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(134, 228, 228) 70%);
+    border: solid 2px #86e4e4;
+    box-shadow: 0px 0px 50px 4px #86e4e4;
+    margin: 50px 20px 20px;
 }
 
 #view .jul {
-    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(129, 73, 255) 70%);
+    border: solid 2px #8149ff;
+    box-shadow: 0px 0px 50px 4px #8149ff;
+    margin: 50px 50px 150px;
 }
 
 #view .col {
     padding: 10px;
-}
-
-
-
-#view {
-    margin: 20px;
-    margin-bottom: 20vw;
-}
-
-
-
-#view .dansk {
-
-    margin: 20px;
-    margin-bottom: 20vw;
 }
 
 .image_container {
@@ -321,7 +259,6 @@ p.artist {
     margin: 0.5rem 0;
 }
 
-
 .genre {
     text-transform: capitalize;
 }
@@ -331,44 +268,30 @@ button.close {
 }
 
 .track_boks {
-    /*    border: 7px double rgba(255, 255, 255, 0.15);*/
     color: #fff;
 }
 
-.col .track_boks h2 {
-    text-align: left;
+#view .track_boks h2 {
+    text-align: center;
     font-size: 2.4rem;
     padding-top: 1px;
-    color: #fff;
 }
 
 /*----------------------------------------------
 5: Footer
 ----------------------------------------------*/
+
 footer {
     color: #fff;
     display: flex;
     flex-wrap: wrap;
-
 }
-
 
 footer .col {
     flex-basis: 350px;
     flex-grow: 1;
     margin: 4vw;
     margin-top: 0;
-
-}
-
-footer .col1 {
-    flex-basis: 350px;
-    flex-grow: 1;
-    margin: 4vw;
-    margin-top: 0;
-    display: flex;
-
-
 }
 
 footer .logo_boks {
@@ -395,7 +318,6 @@ footer .logo_boks {
         border-radius: 8px;
     }
 
-
     .view_boks {
         grid-template-columns: repeat(2, 1fr);
         margin: 20px 20px;
@@ -406,29 +328,8 @@ footer .logo_boks {
     }
 
     #view {
-
         margin-bottom: 13vw;
-
     }
-
-    footer .col {
-        flex-basis: 350px;
-        flex-grow: 1;
-        margin: 4vw;
-        margin-top: 0;
-
-    }
-
-    footer .col1 {
-        flex-basis: 350px;
-        flex-grow: 1;
-        margin: 4vw;
-        margin-top: 0;
-        display: flex;
-
-
-    }
-
 
 }
 
@@ -438,7 +339,6 @@ footer .logo_boks {
     }
 
     .forside_overskrift h1 {
-
         font-size: 2rem;
     }
 
@@ -451,28 +351,6 @@ footer .logo_boks {
         margin: 40px 100px;
     }
 
-    footer {}
-
-    footer .col {
-        flex-basis: 350px;
-        flex-grow: 1;
-        margin: 4vw;
-        margin-top: 0;
-
-    }
-
-
-    footer .col1 {
-        flex-basis: 350px;
-        flex-grow: 1;
-        margin: 4vw;
-        margin-top: 0;
-        display: flex;
-
-
-    }
-
-
 }
 
 @media only screen and (min-width: 1200px) {
@@ -481,15 +359,8 @@ footer .logo_boks {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .forside_overskrift h1 {
-
-        font-size: 2rem;
-    }
-
     button {
-
         font-size: 30px;
-
     }
 
     .view_boks {
@@ -501,33 +372,9 @@ footer .logo_boks {
         grid-column: auto;
     }
 
-    footer {}
-
-    footer .col {
-        flex-basis: 350px;
-        flex-grow: 1;
-        margin: 4vw;
-        margin-top: 0;
-
-    }
-
-    footer .col1 {
-        flex-basis: 350px;
-        flex-grow: 1;
-        margin: 4vw;
-        margin-top: 0;
-        display: flex;
-
-
-    }
-
     footer .logo_boks {
         padding: 1vw;
         padding-top: 2vw;
     }
-
-
-
-
 
 }
