@@ -26,7 +26,7 @@ button {
     color: white;
     margin: 0px 0px 0px 0px;
     padding: 4px 12px;
-    font-size: 10px;
+    font-size: 30px;
     cursor: pointer;
     outline: none;
 }
@@ -176,17 +176,86 @@ p.artist {
 }
 
 #view .rock {
-    /*    background-image: linear-gradient(red, yellow, green);*/
-    background-image: linear-gradient (rgb(185, 45, 83), rgb(0, 0, 0), rgb(185, 45, 83));
+    border: solid 5px #b92d53;
 
 }
 
+#view .rock h1 {
+    /*background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);*/
+    color: #b92d53;
+
+
+}
+
+#view .rock h2 {
+    color: #fff;
+
+
+}
+
+#view .rock p {
+    /*background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);*/
+    color: #fff;
+
+
+
+}
+
+#view .rock img {
+    /*    border: solid 5px #b92d53;*/
+
+}
+
+
 #view .pop {
-    background-image: linear-gradient(rgb(249, 236, 77), rgb(0, 0, 0), rgb(249, 236, 77));
+    border: solid 5px #f9ec4d;
+}
+
+#view .pop h1 {
+    /*background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);*/
+    color: #f9ec4d;
+
+}
+
+#view .pop h2 {
+    color: #f9ec4d;
+    text-align: center;
+}
+
+#view .pop p {
+    /*background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);*/
+    color: #fff;
+
+
+
+}
+
+#view .pop img {
+    /*    border: solid 5px #f9ec4d;*/
 }
 
 #view .dansk {
-    background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);
+    border: solid 2px #95d95a;
+}
+
+#view .dansk h1 {
+    /*background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);*/
+    color: #95d95a;
+
+}
+
+#view .dansk h2 {
+    color: #95d95a;
+    text-align: left;
+}
+
+#view .dansk p {
+    /*background-image: linear-gradient(to top, rgb(255, 255, 255) 35%, rgb(149, 217, 89) 70%);*/
+    color: #fff;
+}
+
+#view .dansk {
+    box-shadow: 0px 0px 50px 4px #95d95a;
 }
 
 #view .country {
@@ -224,9 +293,6 @@ p.artist {
     margin: 0.5rem 0;
 }
 
-#view h2 {
-    color: #000;
-}
 
 .genre {
     text-transform: capitalize;
@@ -237,12 +303,12 @@ button.close {
 }
 
 .track_boks {
-    border: 7px double rgba(255, 255, 255, 0.3);
+    /*    border: 7px double rgba(255, 255, 255, 0.15);*/
     color: #fff;
 }
 
-.col.track_boks h2 {
-    text-align: center;
+.col .track_boks h2 {
+    text-align: left;
     font-size: 2.4rem;
     padding-top: 1px;
     color: #fff;
@@ -252,11 +318,30 @@ button.close {
 5: Footer
 ----------------------------------------------*/
 footer {
-    color: #b4adad;
+    color: #fff;
     display: flex;
     flex-wrap: wrap;
+
 }
 
+
+footer .col {
+    flex-basis: 350px;
+    flex-grow: 1;
+    margin: 4vw;
+    margin-top: 0;
+
+}
+
+footer .col1 {
+    flex-basis: 350px;
+    flex-grow: 1;
+    margin: 4vw;
+    margin-top: 0;
+    display: flex;
+
+
+}
 
 /*----------------------------------------------
 6: Media Queries
@@ -288,7 +373,6 @@ footer {
         grid-column: span 2;
     }
 
-    footer {}
 
     footer .col {
         flex-basis: 350px;
