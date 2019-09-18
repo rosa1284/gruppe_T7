@@ -33,14 +33,6 @@ button,
     text-decoration: none;
 }
 
-
-/*
-h1 {
-    text-align: center;
-    font-weight: 900;
-}
-*/
-
 a {
     cursor: pointer;
 }
@@ -168,11 +160,6 @@ https://codepen.io/joshmath/pen/NrPBBz
         opacity: 0;
     }
 }
-
-
-
-
-
 
 nav {
     display: flex;
@@ -377,12 +364,6 @@ p.artist {
     text-transform: capitalize;
 }
 
-/*
-.close {
-    margin: 20px 0px 20px 0px;
-}
-*/
-
 .track_boks {
     color: #fff;
 }
@@ -449,24 +430,19 @@ footer .logo_boks {
         margin-bottom: 13vw;
     }
 
-
-
     footer .logo_boks img {
         width: 400px;
     }
 
     footer .col {
         flex-basis: 50px;
-
     }
-
 }
 
 @media only screen and (min-width: 768px) {
     .section_wrapper {
         margin: auto 15vw;
     }
-
 
     .gradient {
         height: 3vh;
@@ -484,9 +460,6 @@ footer .logo_boks {
     .view_boks {
         margin: 40px 100px;
     }
-
-
-
 }
 
 @media only screen and (min-width: 1200px) {
@@ -517,5 +490,4 @@ footer .logo_boks {
         padding: 1vw;
         padding-top: 2vw;
     }
-
 }
