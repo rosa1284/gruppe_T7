@@ -34,10 +34,12 @@ button,
 }
 
 
+/*
 h1 {
     text-align: center;
     font-weight: 900;
 }
+*/
 
 a {
     cursor: pointer;
@@ -64,6 +66,113 @@ a {
 /*----------------------------------------------
 3: Forside
 ----------------------------------------------*/
+/*
+https://codepen.io/joshmath/pen/NrPBBz
+*/
+.section_wrapper {
+
+    /*placerer indhold 80px fra toppen*/
+    padding-top: 40px;
+    /*bestemmer forholdet på størrelsen af skriften*/
+    font-size: 20px;
+    color: #fff;
+    margin: auto 7vw;
+}
+
+.section_wrapper h1 {
+    /*bestemmer forholdet på størelsen af skriften*/
+    font-size: 2rem;
+    /*placerer indholdet i midten*/
+    display: block;
+}
+
+.section_wrapper h2 {
+    /*bestemmer forholdet på størelsen af skriften*/
+    font-size: 2rem;
+    /*placerer indholdet i midten*/
+    display: block;
+}
+
+.spinny_wrapper {
+    position: relative;
+}
+
+/*--------------------------------------------------
+-------------------- rotate words ------------------
+---------------------------------------------------*/
+
+.spinny_words {
+
+    /*venstrestiller teksten*/
+    text-align: left;
+    /*laver bogstaverne om til store bogstaver*/
+    text-transform: uppercase;
+    /*    display: inline-block;*/
+}
+
+/*css på span så den viser det på ét ord ad gangen*/
+.spinny_words span {
+    /*lægger sig absolut i forhold til spinny-wrapper og placerer hvert ord oven på hinanden*/
+    position: absolute;
+    */
+    /*Får en tykkere skrift*/
+    font-weight: 900;
+    opacity: 0;
+    animation: rotateWord 12s linear infinite 0s;
+}
+
+/*vælger 2./3./4. child i span div'en "spinny-words" og sætter en delay på, så ordet starter med at roterer x-antal sekunder senere end 1.child*/
+.spinny_words span:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.spinny_words span:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.spinny_words span:nth-child(4) {
+    animation-delay: 9s;
+}
+
+/*her gøres ordet gennemsigtigt når det roterer ud*/
+@keyframes rotateWord {
+    0% {
+        opacity: 0;
+    }
+
+    2% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    17% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
 
 nav {
     display: flex;
@@ -343,6 +452,10 @@ footer .logo_boks {
 }
 
 @media only screen and (min-width: 768px) {
+    .section_wrapper {
+        margin: auto 15vw;
+    }
+
     .gradient {
         height: 3vh;
     }
@@ -363,6 +476,10 @@ footer .logo_boks {
 }
 
 @media only screen and (min-width: 1200px) {
+    .section_wrapper {
+        margin: auto 25vw;
+    }
+
     .modtager {
         margin: 0 150px 150px;
         grid-template-columns: repeat(4, 1fr);
