@@ -21,7 +21,8 @@ img {
     width: 100%;
 }
 
-button {
+button,
+a {
     background-color: black;
     color: white;
     margin: 0px 0px 0px 0px;
@@ -29,7 +30,9 @@ button {
     font-size: 14px;
     cursor: pointer;
     outline: none;
+    text-decoration: none;
 }
+
 
 h1 {
     text-align: center;
@@ -74,11 +77,13 @@ nav {
     font-size: 1.3rem;
 }
 
-button {
+button,
+a {
     font-weight: 900;
 }
 
-button:hover {
+button:hover,
+a:hover {
     background-color: #2e2c2c;
     color: #fff;
 }
@@ -303,7 +308,9 @@ footer .logo_boks {
 ----------------------------------------------*/
 
 @media only screen and (min-width: 576px) {
-    button {
+
+    button,
+    a {
         margin: 50px 0px 50px 0px;
         padding: 8px 24px;
         font-size: 20px;
@@ -359,7 +366,8 @@ footer .logo_boks {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    button {
+    button,
+    a {
         font-size: 30px;
     }
 

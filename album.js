@@ -8,7 +8,7 @@ let album = []; // Tomt array der skal indeholde albummets data
 
 document.addEventListener("DOMContentLoaded", getJson); // Program går igang når DOM er loaded
 
-async function getJson() { //json filerne hentes og albums lægges i album det tomme array og funktionen viewAlbum kaldes
+async function getJson() { //json filerne hentes og albums lægges i variablen album (det tomme array) og funktionen viewAlbum kaldes
     const jsonData = await fetch("https://spreadsheets.google.com/feeds/list/1JZaKWrVtkj-qGVCfIds-V04jho2DVpx5GrNsChLv_Sk/od6/public/values?alt=json");
     console.log("jsonData", jsonData);
     album = await jsonData.json();
@@ -39,7 +39,7 @@ function viewAlbum() {
             });
         }
     })
-}
-document.querySelector(".close").addEventListener("click", () => {
-    history.back(); // Ved klik på tilbage knap går vi tilbage til forrige side
-});
+};
+//document.querySelector(".close").addEventListener("click", () => {
+//    history.back(); // Ved klik på tilbage knap går vi tilbage til forrige side
+//});
