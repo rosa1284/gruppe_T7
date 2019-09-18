@@ -404,14 +404,14 @@ footer {
 }
 
 footer .col {
-    flex-basis: 350px;
+    flex-basis: 250px;
     flex-grow: 1;
     margin: 4vw;
     margin-top: 0;
 }
 
 footer .logo_boks {
-    padding: 9vw;
+    padding: 0vw;
 }
 
 /*----------------------------------------------
@@ -449,12 +449,24 @@ footer .logo_boks {
         margin-bottom: 13vw;
     }
 
+
+
+    footer .logo_boks img {
+        width: 400px;
+    }
+
+    footer .col {
+        flex-basis: 50px;
+
+    }
+
 }
 
 @media only screen and (min-width: 768px) {
     .section_wrapper {
         margin: auto 15vw;
     }
+
 
     .gradient {
         height: 3vh;
@@ -472,6 +484,8 @@ footer .logo_boks {
     .view_boks {
         margin: 40px 100px;
     }
+
+
 
 }
 
