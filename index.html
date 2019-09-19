@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music</title>
     <link rel="stylesheet" href="style.css">
+
+    <!--   link til google font-->
     <link href="https://fonts.googleapis.com/css?family=Gothic+A1:400,700,900&display=swap" rel="stylesheet">
 
+    <!--
+
+         Favicon indsættelse
+-->
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -18,10 +24,14 @@
 </head>
 
 <body>
+
+    <!--   Vores header bruger vi til det der skal ligge øverst på vores hjemmeside og det der bliver set først, i dette tilfælde vores splash billede samt gradienten.-->
     <header>
         <div class="splash"></div>
         <div class="gradient"></div>
     </header>
+
+    <!--    Her har vi lavet en section der skal indholde siden overskrift, herunder et span tag der får ordet efter "Opgrader" til at skifte mellem de forskellige span tag-->
     <section class="section_wrapper">
         <h1 class="overskrift">Get the music!</h1>
         <div class="spinny_wrapper">
@@ -34,6 +44,10 @@
                 </span></h2>
         </div>
     </section>
+    <!--
+
+    nav tagget bruger vi til vores filtrerings knapper og denne sides menu
+-->
     <nav>
         <button class="filter valgt alle_btn" data-kategori="alle">ALLE</button>
         <button class="filter rock_btn" data-kategori="rock">ROCK</button>
@@ -43,6 +57,7 @@
         <button class="filter jul_btn" data-kategori="jul">JUL</button>
     </nav>
 
+    <!--   template tagget er det tag der indholder alt vores data fra googlesheetet. Dvs. at klassen album danner flere articles an på hvilke informationer som der bliver henter i googlesheetet. Her under hentes der informationer om album navn, kunstner og et billede af albummet. -->
     <template>
         <article class="album">
             <div class="content">
@@ -54,6 +69,10 @@
         </article>
     </template>
     <section class="modtager"></section>
+    <!--
+
+    Footeren er brugt primært til kontakt information.
+-->
     <footer>
         <div class="gradient"></div>
         <div class="col">
@@ -72,4 +91,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
-</body></html>
+</body>
+
+</html>
