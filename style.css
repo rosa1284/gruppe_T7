@@ -163,6 +163,10 @@ https://codepen.io/joshmath/pen/NrPBBz
 
 nav {
     display: flex;
+    /*
+
+Her centere vi nav, som i dette tilfælde er vores filtrerings kanpper
+*/
     justify-content: center;
     margin-top: 20px;
 }
@@ -175,15 +179,22 @@ nav {
 
 button,
 .close a {
+    /*    Her gør vi vores font størrelse bold via at vægte den med 900*/
     font-weight: 900;
 }
 
+/*
+
+Vi har lavet en hover på vores knapper, dvs, at når curseren rammer rør knapperne så reagere de ved at skifte farve
+*/
 button:hover,
 .close a:hover {
     background-color: #2e2c2c;
     color: #fff;
 }
 
+/*Hver knap har vi valgt skal have hver sin farve når kanppen er trykket på og man er på den valgte filtrering side,
+derfor har hver kanp nedeunder fået hver sin klasse med hver sin farve.*/
 button.valgt.alle_btn {
     background-color: #fff;
     color: #000;
@@ -245,6 +256,8 @@ article .ribbon {
     max-width: 80%;
 }
 
+/*Vi har valgte at hver sin genre skal have hver sin farve og disse farver skal følge genrene på både loop view og single view, derfor har vi nedstående igen brugt hvert genres klasse, for at farve de enkeltes h1 og h2'er så disse også skrifter farve an på hvilken genre man er inde på.*/
+
 .content h2 {
     margin: 0;
     font-size: 20px;
@@ -275,6 +288,8 @@ article .ribbon {
     color: #8149ff;
 }
 
+/*Restrende p tag har vi gives en hvid farve, da det ikke er alle genres farve der er læsbart på den sorte farve når man går ned i en lille størrelsefont.*/
+
 #view p {
     color: #fff;
 }
@@ -290,12 +305,16 @@ p.artist {
 4: Album side
 ----------------------------------------------*/
 
+
+/*tracket har vi valgt at centrere, det danner parraleller til et fysisk CD albums opstilling at tracket på bagsiden af CD'en*/
 .track {
     text-align: center;
+    /*    inside: betyder, at kuglepunkterne er inde i listeposten og bliver derfor centreret med teksten.*/
     list-style-position: inside;
     padding: 0;
 }
 
+/*Istedet for at lave kolonner med flexboks så har vi lavet kolonnerne med grid i vores single view.*/
 .view_boks {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -303,6 +322,10 @@ p.artist {
     border-radius: 8px;
 }
 
+
+/*I vores single view har vi lavet en skygge der fader ud,
+denne skygge skal også skifte farve an på hvilken genre man har trykket sig ind på,
+derfor har vi igen taget de enkelte genres klasse og givet dem en skygge og dermed stylet dem med hver deres farve.*/
 #view .rock {
     border: solid 2px #b92d53;
     box-shadow: 0px 0px 50px 4px #b92d53;
