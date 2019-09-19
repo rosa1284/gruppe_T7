@@ -58,8 +58,10 @@ a {
 /*----------------------------------------------
 3: Forside
 ----------------------------------------------*/
-/*
+/* Lånt kode
+
 https://codepen.io/joshmath/pen/NrPBBz
+
 */
 .section_wrapper {
 
@@ -245,6 +247,7 @@ article {
     width: 100%;
 }
 
+/*Her laver vi den sorte kasse med tilhørende tekst i*/
 article .ribbon {
     font-weight: 900;
     background-color: #000;
@@ -314,7 +317,7 @@ p.artist {
     padding: 0;
 }
 
-/*Istedet for at lave kolonner med flexboks så har vi lavet kolonnerne med grid i vores single view.*/
+/*Vi har lavet vores album side med grid, dette er mobile first så nede i mediaQuery er der lavet repeat 3 i stedet for 1*/
 .view_boks {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -424,6 +427,7 @@ footer .logo_boks {
 
 @media only screen and (min-width: 576px) {
 
+    /*Vores tilbage knap på albumsiden*/
     button,
     .close a {
         margin: 50px 0px 50px 0px;
@@ -431,6 +435,7 @@ footer .logo_boks {
         font-size: 20px;
     }
 
+    /* Når vi gør skærmen større ændre vi vores grid til at være med 2 kolonner. */
     .modtager {
         margin: 0 20px 20px;
         grid-template-columns: repeat(2, 1fr);
